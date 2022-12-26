@@ -1,0 +1,26 @@
+.actions {
+  text-align: center;
+}
+
+.addButton {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: #16adfe;
+  background-color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addButton:hover,
+.addButton:focus {
+  background-color: #16adfe;
+  color: #fff;
+}
+
+.addButton a {
+  width: 100%;
+}

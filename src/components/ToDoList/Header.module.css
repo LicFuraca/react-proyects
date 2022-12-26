@@ -1,0 +1,44 @@
+.card {
+  padding: 3.5rem 1rem 0 1rem;
+  border-radius: 20px;
+  color: #ebf3f4;
+  background: linear-gradient(#16adfe, #7c7ff2);
+}
+
+.date {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dateRight {
+  display: flex;
+  align-items: center;
+}
+
+.dateNumber {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ecec38;
+  margin-right: 0.5rem;
+}
+
+.dateMonth {
+  display: block;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.dateYear {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.dateDay {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
