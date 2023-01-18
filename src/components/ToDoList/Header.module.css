@@ -1,5 +1,5 @@
 .card {
-  padding: 3.5rem 1rem 0 1rem;
+  padding: 3rem 1rem 0 1rem;
   border-radius: 20px;
   color: #ebf3f4;
   background: linear-gradient(#16adfe, #7c7ff2);
@@ -18,7 +18,7 @@
 }
 
 .dateNumber {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #ecec38;
   margin-right: 0.5rem;
@@ -26,19 +26,19 @@
 
 .dateMonth {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   letter-spacing: 1px;
   font-weight: 500;
 }
 
 .dateYear {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
 .dateDay {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-transform: capitalize;
 }

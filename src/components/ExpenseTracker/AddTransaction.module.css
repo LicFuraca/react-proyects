@@ -1,0 +1,58 @@
+.container h3 {
+  font-family: "Lato", serif;
+  font-size: 1rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .formControl {
+  display: flex;
+  flex-direction: column;
+}
+
+.formControl label {
+  margin: 0.5rem 0;
+  font-family: "Lato", serif;
+  font-size: 0.8rem;
+}
+
+.formControl input {
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid;
+  font-family: "Lato", serif;
+}
+
+.formControl label span {
+  display: block;
+  font-family: "Lato", serif;
+}
+
+.formControl input:focus {
+  background-color: #d5cdff;
+  outline: none;
+  border: 1px solid #9c88ff;
+}
+
+form button {
+  margin: 1rem 0;
+  background-color: #9c88ff;
+  color: #fff;
+  padding: 10px 0;
+  border: none;
+  font-family: "Lato", serif;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: rgba(156, 136, 255, 0.7);
+}

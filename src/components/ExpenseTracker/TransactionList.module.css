@@ -1,0 +1,15 @@
+.container {
+  margin: 2rem 0;
+}
+
+.container h3 {
+  font-family: "Lato", serif;
+  font-size: 1rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+}

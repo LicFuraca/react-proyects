@@ -28,7 +28,7 @@ const Task = props => {
           onClick={deleteTaskHandler}
           className={classes.delete}
         >
-          <i class="fas fa-trash"></i>
+          <i className="fas fa-trash"></i>
         </button>
       </div>
       <input

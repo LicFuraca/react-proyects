@@ -10,7 +10,7 @@ import "./App.css";
 const ToDoList = React.lazy(() => import("./pages/ToDoList"));
 const NewTaskPage = React.lazy(() => import("./pages/NewTaskPage"));
 const CalculatorPage = React.lazy(() => import("./pages/CalculatorPage"));
-
+const ExpenseTracker = React.lazy(() => import("./pages/ExpenseTracker"));
 function App() {
   return (
     <>
@@ -36,6 +36,9 @@ function App() {
               </Route>
               <Route path="/calculator">
                 <CalculatorPage />
+              </Route>
+              <Route path="/expense-tracker">
+                <ExpenseTracker />
               </Route>
             </Switch>
           </Suspense>

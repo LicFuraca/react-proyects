@@ -22,6 +22,11 @@ const Header = () => {
               Calculadora
             </NavLink>
           </li>
+          <li>
+            <NavLink to="./expense-tracker" activeClassName={classes.active}>
+              Control de Gastos
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>
