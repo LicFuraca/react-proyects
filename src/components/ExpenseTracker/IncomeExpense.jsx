@@ -4,8 +4,8 @@ import ExpenseContext from "../../context/ExpenseContext";
 import classes from "./IncomeExpense.module.css";
 
 const IncomeExpense = () => {
-  const context = useContext(ExpenseContext);
-  const amounts = context.initialState.map(item => item.amount);
+  const { transactions } = useContext(ExpenseContext);
+  const amounts = transactions.map(transaction => parseInt(transaction.amount));
 
   let positiveAmounts = 0;
   let negativeAmounts = 0;

@@ -6,7 +6,9 @@ import classes from "./Balance.module.css";
 const Balance = () => {
   const context = useContext(ExpenseContext);
 
-  const amounts = context.initialState.map(item => item.amount);
+  const amounts = context.transactions.map(transaction =>
+    parseInt(transaction.amount)
+  );
   const total = amounts.reduce((acc, currentValue) => (acc += currentValue), 0);
 
   return (

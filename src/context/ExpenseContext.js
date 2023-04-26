@@ -1,53 +1,31 @@
-import { createContext, useState } from "react";
-
-const initialState = [
-  { id: Math.random(), title: "Sueldo Megatlon", amount: 92000 },
-  { id: Math.random(), title: "Blanca Tarsia", amount: 7700 },
-  { id: Math.random(), title: "Legal Accurify", amount: 27000 },
-  { id: Math.random(), title: "Anteojos Mica", amount: -18000 },
-];
+import { createContext, useState, useEffect } from "react";
 
 const ExpenseContext = createContext();
 
 export const ExpenseProvider = ({ children }) => {
-  const [title, setTitle] = useState("");
-  const [amount, setAmount] = useState(0);
+  let localData = localStorage.getItem("transactions");
+  const [transactions, setTransactions] = useState(JSON.parse(localData));
 
-  const titleChangeHandler = event => {
-    setTitle(event.target.value);
-  };
-
-  const amountChangeHandler = event => {
-    setAmount(parseInt(event.target.value));
-  };
-
-  const addTransaction = event => {
-    event.preventDefault();
-
-    initialState.push({
-      id: Math.random(),
-      title,
-      amount,
-    });
-
-    setTitle("");
-    setAmount(0);
+  const addTransaction = (title, amount) => {
+    setTransactions([...transactions, { title, amount, id: Math.random() }]);
   };
 
   const deleteTransaction = id => {
-    initialState.filter(item => item.id !== id);
+    setTransactions(transactions.filter(transaction => transaction.id !== id));
   };
 
-  const transactionsData = {
-    titleChangeHandler,
-    amountChangeHandler,
-    addTransaction,
-    deleteTransaction,
-    initialState,
-  };
+  useEffect(() => {
+    const getTransactions = () => {
+      localStorage.setItem("transactions", JSON.stringify(transactions));
+    };
+
+    getTransactions();
+  }, [transactions]);
 
   return (
-    <ExpenseContext.Provider value={transactionsData}>
+    <ExpenseContext.Provider
+      value={{ transactions, deleteTransaction, addTransaction }}
+    >
       {children}
     </ExpenseContext.Provider>
   );

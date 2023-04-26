@@ -4,15 +4,14 @@ import ExpenseContext from "../../context/ExpenseContext";
 import classes from "./Transaction.module.css";
 
 const Transaction = ({ transaction }) => {
-  const context = useContext(ExpenseContext);
+  const { deleteTransaction } = useContext(ExpenseContext);
 
   const sign = transaction.amount < 0 ? "-" : "+";
   const redOrGreen =
     transaction.amount < 0 ? `${classes.minus}` : `${classes.plus}`;
 
   const deleteHandler = () => {
-    context.deleteTransaction(transaction.id);
-    
+    deleteTransaction(transaction.id);
   };
 
   return (

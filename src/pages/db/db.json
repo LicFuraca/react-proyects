@@ -1,6 +1,0 @@
- [
-  { "id": Math.random(), title: "Sueldo Megatlon", amount: 92000 },
-  { id: Math.random(), title: "Blanca Tarsia", amount: 7700 },
-  { id: Math.random(), title: "Legal Accurify", amount: 27000 },
-  { id: Math.random(), title: "Anteojos Mica", amount: -18000 },
-]
