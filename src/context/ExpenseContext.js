@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 
 const ExpenseContext = createContext();
 
@@ -14,14 +14,6 @@ export const ExpenseProvider = ({ children }) => {
 			transactions.filter((transaction) => transaction.id !== id)
 		);
 	};
-
-	useEffect(() => {
-		const getTransactions = () => {
-			localStorage.setItem("transactions", JSON.stringify(transactions));
-		};
-
-		getTransactions();
-	}, [transactions]);
 
 	return (
 		<ExpenseContext.Provider
